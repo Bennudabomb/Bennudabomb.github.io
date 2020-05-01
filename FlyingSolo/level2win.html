@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> You Beat Level 2! </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",500,400);
+var win_text = new sjs.Text("You Beat Level Two You Finally Did it! Now How about you try Level Three!",34,"lime");
+var startBtn = new sjs.Button("Level Three!", function() {
+	window.location = "level3.html";
+});
+startBtn.center();
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Level 2 Win! </h1>
+
+<div id="target" style="margin:auto;background:cyan;"></div>
+</body>
+</html> 

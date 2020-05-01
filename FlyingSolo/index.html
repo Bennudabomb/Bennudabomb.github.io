@@ -1,0 +1,32 @@
+<html>
+<head>
+<title> Custom Game </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",500,400);
+var menu_text = new sjs.Text("Flying Solo!: A Javascript Game By Bennudabomb! Controls are the Left and Right Arrow Keys!",28,"cyan");
+menu_text.bottom();
+var level1_Btn = new sjs.Button("Level 1", function(){
+	window.location = "parachutegame.html";
+	level1_Btn.moveTo(250,50);
+});
+level1_Btn.moveTo(250,50);
+var level2_Btn = new sjs.Button("Level 2", function(){
+	window.location = "level2.html";
+});
+level2_Btn.moveTo(250,100);
+
+var level3_Btn = new sjs.Button("Level 3", function(){
+	window.location = "level3.html";
+});
+level3_Btn.moveTo(250,150);
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Custom Game </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html> 

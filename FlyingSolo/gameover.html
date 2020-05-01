@@ -1,0 +1,21 @@
+<html>
+<head>
+<title> Flying Solo! </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",500,500);
+var gameover_text = new sjs.Text("Game Over you Lose! Would you like to try again?",30,"cyan");
+var restartBtn = new sjs.Button("Try Again?", function() {
+    window.location = "parachutegame.html";
+});
+restartBtn.center();
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Flying Solo! </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html> 

@@ -1,0 +1,70 @@
+<html>
+<head>
+<title> Level Three! </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",250,500);
+var background = new sjs.Image("Images/backgrounddabomb.png");
+background.setSize(250, 500);
+//Player Properties
+var player = new sjs.Image("Images/player.png");
+player.type = "player";
+player.setSize(40,75);
+player.setGravity(3.45);
+player.moveTo(125,125);
+player.friction = .35;
+//Player Controls
+sjs.keyDown(RIGHT_KEY, function (){
+player.pushRight(1.5);
+}); //End Right Key
+sjs.keyDown(LEFT_KEY, function (){
+player.pushLeft(1.5);
+});
+//Obstacle
+var obstacle = new sjs.Image("Images/Enemy.png");
+obstacle.type = "obstacle";
+obstacle.setSize(38,50);
+obstacle.setGravity(3.50);
+obstacle.moveTo(125,1);
+obstacle.friction = .15;
+//Obstacle 2
+var obstacle = new sjs.Image("Images/Enemy.png");
+obstacle.type = "obstacle";
+obstacle.setSize(38,49);
+obstacle.setGravity(3.5);
+obstacle.moveTo(225,1);
+obstacle.friction = .25;
+//Obstacle 3
+var obstacle = new sjs.Image("Images/Enemy.png");
+obstacle.type = "obstacle";
+obstacle.setSize(38,48);
+obstacle.setGravity(5);
+obstacle.moveTo(10,1);
+obstacle.friction = .15;
+//Portal 1
+var portal = new sjs.Image("Images/portaldabomb.png");
+portal.type = "portal";
+portal.setSize(50,30);
+portal.moveTo(160,500);
+//Portal 2
+var portal = new sjs.Image("Images/portaldabomb.png");
+portal.type = "portal";
+portal.setSize(49,29);
+portal.moveTo(50,500);
+//onHit Code Below
+sjs.onHit("player","obstacle", function(x,y){
+    window.location = "gameover.html";
+}); 
+sjs.onHit("player","portal", function(x,y){
+	window.location = "wingame.html";
+});
+
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Flying Solo! </h1>
+<div id="target" style="margin:auto;background:grey;"></div>
+</body>
+</html> 
