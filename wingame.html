@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> You Beat The Game!!! </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+function start(){
+sjs.open("target",500,400);
+var win_text = new sjs.Text("You Beat The Game! How'd you do it?",34,"orange");
+var startBtn = new sjs.Button("Menu", function() {
+	window.location = "index.html";
+});
+startBtn.center();
+} //end start
+</script>
+</head>
+<body onload="start()">
+<h1> Game Win! </h1>
+<div id="target" style="margin:auto;background:blue;"></div>
+</body>
+</html> 
